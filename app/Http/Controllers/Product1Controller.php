@@ -9,7 +9,7 @@ class Product1Controller extends Controller
 {
     public function index()
     {
-        $products1 = Product1::all(); //nama table + model
+        $product1s = Product1::all(); //nama table + model
 
         return view('products1.index', compact(['products1']));
     }
@@ -24,19 +24,19 @@ class Product1Controller extends Controller
     }
     public function edit($id)
     {
-        $product1 = Product1::find($id);
-        return view('products1.edit', compact(['product1']));
+        $product1s = Product1::find($id);
+        return view('products1.edit', compact(['products1']));
     }
     public function update(Request $request, $id)
     {
-        $product1 = Product1::find($id);
-        $product1->update($request->all());
+        $product1s = Product1::find($id);
+        $product1s->update($request->all());
         return redirect('/products1');
     }
     public function destroy($id)
     {
-        $product1 = Product1::find($id);
-        $product1->delete();
+        $product1s = Product1::find($id);
+        $product1s->delete();
         return redirect('/products1');
     }
 }

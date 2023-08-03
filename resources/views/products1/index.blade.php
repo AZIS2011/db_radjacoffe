@@ -8,12 +8,12 @@
         </tr>
     </thead>
     <tbody>
-        @foreach ($products1 as $product1)
+        @foreach ($product1s as $product1)
 
         <tr>
-            <td>{{ $products1->name }} </td>
-            <td>{{ $products1->description }}</td>
-            <td> {{ $products1->price }}</td>
+            <td>{{ $product1s->name }} </td>
+            <td>{{ $product1s->description }}</td>
+            <td> {{ $product1s->price }}</td>
             <td>
                 <a href="/products1/{{ $product1->id }}/edit">Edit</a>
                 <form action="/products1/{{ $product1->id }}" method="POST">

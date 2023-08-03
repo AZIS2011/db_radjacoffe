@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MakananController;
 use App\Http\Controllers\Product1Controller;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -21,6 +22,15 @@ Route::post('/products', [ProductController::class, 'store']);
 Route::get('/products/{id}/edit', [ProductController::class, 'edit']);
 Route::put('/products/{id}', [ProductController::class, 'update']);
 Route::delete('/products/{id}', [ProductController::class, 'destroy']);
+
+Route::get('/makanan', [MakananController::class, 'index']);
+Route::get('/makanan/create', [MakananController::class, 'create']);
+Route::post('/makanan', [MakananController::class, 'store']);
+Route::get('/makanan/{id}/edit', [MakananController::class, 'edit']);
+Route::put('/makanan/{id}', [MakananController::class, 'update']);
+Route::delete('/makanan/{id}', [MakananController::class, 'destroy']);
+
+
 
 Route::get('/products1', [Product1Controller::class, 'index']);
 Route::get('/products1/create', [Product1Controller::class, 'create']);
